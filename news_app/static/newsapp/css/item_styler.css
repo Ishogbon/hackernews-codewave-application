@@ -1,0 +1,56 @@
+body {
+    background: #f7f7f7;
+    margin: 0;
+    color: #555;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header {
+    background-color: #fff;
+    margin:0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1em 0 1em 1em;
+}
+#site-logo-name {
+    margin: 0;
+    color: orange;
+}
+#item-title {
+    color: orange;
+    font-size: 2em;
+}
+#inner-body {
+    margin: 3%;
+    background-color: #fff;
+    width: 70%;
+    padding: 0.5em;
+}
+#item-url {
+    color: orange;
+}
+.comments {
+    border-left: 2px solid grey;
+    padding-left: 0.4em;
+}
+.comment-by {
+    color: white;
+    background-color: orange;
+    padding: 0.2em;
+    margin-right: 0.3em;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.pollopts {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    margin-left: 0.5em;
+    padding: 0.3em;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}

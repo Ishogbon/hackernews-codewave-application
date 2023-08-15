@@ -1,0 +1,110 @@
+body {
+    background: #f7f7f7;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header {
+    background-color: #fff;
+    margin:0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1em 0 1em 1em;
+}
+#site-logo-name {
+    margin: 0;
+    color: orange;
+}
+#inner-body {
+    color: #555;
+}
+#main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5%  0 0 10%;
+    width: 85%;
+}
+#items-list {
+    width: 65%;
+}
+#filters-bar {
+    width: 30%;
+}
+.item {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.item-title {
+    margin-bottom: 0.3em;
+}
+.item-title a {
+    font-size: 1.2em;
+    color: orange;
+    outline: none;
+    border-bottom: 1px solid orange;
+    text-decoration: none;
+}
+.item-others {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.item-other {
+    flex-direction: column;
+}
+.item-other a {
+    color: orange;
+    text-decoration: none;
+    border-bottom: 1px solid orange;
+}
+.item-others-title {
+    color: #000;
+}
+.pagination {
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+}
+#text-filter-bar {
+    margin-top: 0.5em;
+}
+#text-filter-input {
+    padding: 0.3em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #999;
+}
+#type-filter-bar {
+    margin-top: 3.5em;
+}
+#type-filter-bar > h2 {
+    color: orange;
+}
+.type-filter-input-bar {
+    margin-top: 0.4em;
+}
+.type-filter-input-bar > label, .type-filter-input-bar > input[type="radio"] {
+    cursor: pointer;
+}
+#submit-bar {
+    margin-top: 3em;
+}
+#reset-filters-btn, #filters-submit-btn {
+    background: orange;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0.4em;
+    cursor: pointer;
+}
+#reset-filters-btn > a, #filters-submit-btn > a {
+    color: white;
+}
+#filters-submit-btn {
+    margin-left: 10%;
+}

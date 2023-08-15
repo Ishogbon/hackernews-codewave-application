@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{item.TYPE}}: {{item.title}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link
+        rel="stylesheet"
+        href="{% static 'newsapp/css/item_styler.css' %}"
+      />
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <h1 id="site-logo-name"><i>CodeWave</i></h1>
+        </header>
+        <div id="inner-body">
+            <div id="item-header"><span id="item-title">{{item.title}}</span> ({{item.TYPE}})
+                {% if item.url %}
+                <a id="item-url" href="{{item.url}}">visit story</a>
+                {% endif %}
+            </div>
+            <span class = "item-score">Item Score: {{item.score}}</span> 
+            {% if item.TYPE == 'poll' %}
+            <h3>Options</h3>
+            <div id="pollopts">
+                {% for pollopt in pollopts %}
+                <div class="pollopts">
+                    Option:<span class="pollopt-title">{{pollopt.text}}</span>
+                    <br />
+                    Score: <span class="pollopt-score">{{pollopt.score}}</span>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div id="inner-content">
+                {% if item.text and item.text|length > 0 %}
+                <h3>content</h3>
+                {{item.text}}
+                {% endif %}
+                <h3>Comments</h3>
+                {% for comment in comments %}
+                <div style="margin-left: {{comment.indent}}em" class="comments">
+                    <span class="comment-by">
+                        {{comment.by}}
+                    </span>
+                    <span class="score">
+                        {{comment.score}}
+                    </span>
+                    <p class="comment-text">
+                        {{comment.text|safe}}
+                    </p>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
