@@ -3,8 +3,11 @@
 CodeWave is a Python/Django web application that synchronizes the hackernews database to itself and displays the items to users in a more appeasing and navigatable manner.
 
 ## Notes
+
 - PostgreSQL was used for the database server during developement. It has been reverted to sqlite for the project purpose
 - Because of the simplicity of this test, Unit tests wasn't used, and this package wasn't setup to a python installation.
+- All items have an hash, this was done in response to the possiblity that items might need to be updated from requested API
+- The database tables is horizontally sharded by source and item type
 - Debug was purposely left true for testing
 
 ## Features
@@ -14,7 +17,13 @@ CodeWave is a Python/Django web application that synchronizes the hackernews dat
 - CodeWave also exposes APIs so you can perform CRUD operations on items with a restriction exempting the hackernews items
 - CodeWave has a Stylized web interface where users can interact with items
 
-## Run HackerNews Synchrnoizer
+## installation & Startup
+
+- Create a venv in this directory and activate it
+- Install all dependencies in the requirements.txt (pip3 install -r requirements.txt)
+- Then run application (python manage.py runserver)
+
+## Run HackerNews Synchronizer
 ``` bash
 python manage.py hackernews_synchronizer
 ```
